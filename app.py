@@ -38,7 +38,7 @@ def get_customers():
 def get_inventory():
     conn = get_db_connection()
     cur = conn.cursor()
-    cur.execute('SELECT * FROM inventory')
+    cur.execute('SELECT * FROM inventory;')
     customers = cur.fetchall()
     cur.close()
     conn.close()
