@@ -17,6 +17,11 @@ def get_db_connection():
 @app.route('/')
 def hello():
     return 'Hello from Flask!'
+    
+# Health check endpoint with curl https://your-service.onrender.com/healthcheck
+@app.route('/healthcheck')
+def healthcheck():
+    return jsonify(status="healthy"), 200
 
 # Get all customers
 @app.route('/api/customers')
