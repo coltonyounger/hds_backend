@@ -32,6 +32,17 @@ def get_customers():
     cur.close()
     conn.close()
     return jsonify(customers)
+    
+# Get inventory
+@app.route('/api/inventory')
+def get_inventory():
+    conn = get_db_connection()
+    cur = conn.cursor()
+    cur.execute('SELECT * FROM inventory')
+    customers = cur.fetchall()
+    cur.close()
+    conn.close()
+    return jsonify(inventory)
 
 if __name__ == '__main__':
     app.run(debug=True)
