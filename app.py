@@ -9,8 +9,7 @@ app = Flask(__name__)
 
 # Database connection
 def get_db_connection():
-    conn = psycopg2.connect(os.environ['postgresql://hds_main_database_user:MDOpEbGNqP5uERqaEBZlbZgrNW9gM6TU@dpg-d00i93c9c44c73fn053g-a.virginia-postgres.render.com/hds_main_database'],
-                           sslmode='require')
+    conn = psycopg2.connect(os.environ['DATABASE_URL')
     return conn
 
 # Test endpoint
