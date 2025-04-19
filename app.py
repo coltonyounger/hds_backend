@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 # Database connection
 def get_db_connection():
-    conn = psycopg2.connect(os.environ['DATABASE_URL')
+    conn = psycopg2.connect(os.environ['DATABASE_URL'])
     return conn
 
 # Test endpoint
