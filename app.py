@@ -60,7 +60,7 @@ def get_employees():
 def get_current_jobs():
     conn = get_db_connection()
     cur = conn.cursor()
-    cur.execute('SELECT * FROM curent_jobs;')
+    cur.execute('SELECT * FROM current_jobs;')
     current_jobs = cur.fetchall()
     cur.close()
     conn.close()
